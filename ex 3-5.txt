@@ -1,0 +1,14 @@
+# Шаг 3: Подключить дополнительный репозиторий MySQL и установить пакет
+sudo add-apt-repository mysql-apt-config
+sudo apt-get update
+sudo apt-get install mysql-server
+
+# Шаг 4: Установить и удалить deb-пакет с помощью dpkg
+wget https://example.com/path/to/package.deb -O /tmp/package.deb (поменять на фактический deb)
+sudo dpkg -i /tmp/package.deb   # Установка
+sudo apt-get -f install         # Устранение зависимостей, если нужно
+sudo dpkg -r package_name       # Удаление
+
+# Шаг 5: Выложить историю команд в терминале Ubuntu
+history > terminal_history.txt
+
